@@ -9,6 +9,8 @@ import {
   EventsLoadError,
   EventsActionTypes
 } from './events.actions';
+import {EventsApiService} from "../events-api.service";
+import {map} from "rxjs/internal/operators";
 
 @Injectable()
 export class EventsEffects {
@@ -16,8 +18,11 @@ export class EventsEffects {
     EventsActionTypes.LoadEvents,
     {
       run: (action: LoadEvents, state: EventsPartialState) => {
+        this.eventsApiService.getAllEvents().pipe(
+          map(value => new EventsLoaded(value))
+        )
         // Your custom REST 'load' logic goes here. For now just return an empty list...
-        return new EventsLoaded([]);
+        // return new EventsLoaded([]);
       },
 
       onError: (action: LoadEvents, error) => {
@@ -29,6 +34,7 @@ export class EventsEffects {
 
   constructor(
     private actions$: Actions,
-    private dataPersistence: DataPersistence<EventsPartialState>
+    private dataPersistence: DataPersistence<EventsPartialState>,
+    private eventsApiService: EventsApiService
   ) {}
 }

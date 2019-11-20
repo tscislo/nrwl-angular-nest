@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import {EventsDataAccessModule} from "@angular-events/events-data-access";
+import {DataPersistence} from "@nrwl/angular";
 
 @NgModule({
   declarations: [AppComponent],

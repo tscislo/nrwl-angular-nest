@@ -44,7 +44,11 @@
     "@angular/router": "^8.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.4.0",
-    "zone.js": "^0.9.1"
+    "zone.js": "^0.9.1",
+    "@ngrx/store": "8.3.0",
+    "@ngrx/effects": "8.3.0",
+    "@ngrx/entity": "8.3.0",
+    "@ngrx/router-store": "8.3.0"
   },
   "devDependencies": {
     "@nrwl/workspace": "8.7.1",
@@ -73,6 +77,8 @@
     "codelyzer": "~5.0.1",
     "jest-preset-angular": "7.0.0",
     "cypress": "3.4.1",
-    "@nrwl/cypress": "8.7.1"
+    "@nrwl/cypress": "8.7.1",
+    "@ngrx/schematics": "8.3.0",
+    "@ngrx/store-devtools": "8.3.0"
   }
 }

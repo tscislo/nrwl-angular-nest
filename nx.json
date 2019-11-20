@@ -22,6 +22,9 @@
     },
     "events-feature-list": {
       "tags": []
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }

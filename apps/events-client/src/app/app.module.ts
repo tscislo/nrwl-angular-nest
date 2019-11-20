@@ -19,7 +19,7 @@ import { DataPersistence } from '@nrwl/angular';
     RouterModule.forRoot(
       [
         {
-          path: 'events-feature-list',
+          path: '',
           loadChildren: () =>
             import('@angular-events/events/feature-list').then(
               module => module.EventsFeatureListModule

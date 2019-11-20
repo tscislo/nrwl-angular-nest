@@ -1,7 +1,19 @@
+import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+
+@Entity('events')
 export class Event {
-  id: number;
+  @PrimaryGeneratedColumn()
+  id?: number;
+
+  @Column()
   title: string;
+
+  @Column()
   description: string;
+
+  @Column()
   address: string;
+
+  @Column()
   published: boolean;
 }

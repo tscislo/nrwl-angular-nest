@@ -1,16 +1,22 @@
 import {Event} from "./event.entity";
 import {Injectable} from "@nestjs/common";
+import {Repository} from "typeorm";
+import {InjectRepository} from "@nestjs/typeorm";
 
 @Injectable()
 export class EventService {
 
-  getAllEvents(): Event[] {
-    // const events = this.eventRepository.all();
-    return [];
+
+  getAllEvents(): any {
+    return this.eventRepository.find();
   }
 
-  // constructor(private eventRepository: EventRepository) {
-  //
-  // }
+  createNewEvent(event: Event) {
+    this.eventRepository.save(event);
+  }
+
+  constructor(@InjectRepository(Event) private readonly eventRepository: Repository<Event>) {
+
+  }
 
 }

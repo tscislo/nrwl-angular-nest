@@ -15,7 +15,7 @@ export class EventListComponent implements OnInit {
   // constructor(private eventApiService: EventsApiService) { }
   //
   // ngOnInit() {
-  //   this.eventApiService.getAllEvents().subscribe((r) => {
+  //   this.eventApiService.getAll().subscribe((r) => {
   //     this.events = r;
   //   })
   // }

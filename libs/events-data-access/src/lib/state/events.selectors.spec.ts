@@ -27,7 +27,7 @@ describe('Events Selectors', () => {
   });
 
   describe('Events Selectors', () => {
-    it('getAllEvents() should return the list of Events', () => {
+    it('getAll() should return the list of Events', () => {
       const results = eventsQuery.getAllEvents(storeState);
       const selId = getEventsId(results[1]);
 

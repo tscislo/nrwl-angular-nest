@@ -22,8 +22,6 @@ export class EventsEffects {
           .pipe(
             map((value) => new EventsLoaded(value))
           )
-        // Your custom REST 'load' logic goes here. For now just return an empty list...
-        // return new EventsLoaded([]);
       },
 
       onError: (action: LoadEvents, error) => {

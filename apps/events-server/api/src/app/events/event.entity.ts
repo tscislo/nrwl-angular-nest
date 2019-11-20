@@ -1,7 +1,8 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {IEvent} from "@angular-events/interfaces";
 
 @Entity('events')
-export class Event {
+export class Event implements IEvent {
   @PrimaryGeneratedColumn()
   id?: number;
 

@@ -1,7 +1,8 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {IUser} from "@angular-events/interfaces";
 
 @Entity('users')
-export class User {
+export class User implements IUser {
   @PrimaryGeneratedColumn()
   id?: number;
 

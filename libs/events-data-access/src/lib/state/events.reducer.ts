@@ -10,7 +10,7 @@ export const EVENTS_FEATURE_KEY = 'events';
  */
 
 /* tslint:disable:no-empty-interface */
-export interface Entity {}
+export interface Entity  {}
 
 export interface EventsState {
   list: Entity[]; // list of Events; analogous to a sql normalized table
